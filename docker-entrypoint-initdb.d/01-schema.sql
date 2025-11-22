@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS uber_rides_2024 (
+    booking_id VARCHAR(20) PRIMARY KEY,
+    booking_date DATE,
+    booking_time TIME,
+    booking_status VARCHAR(50),
+    customer_id VARCHAR(20),
+    vehicle_type VARCHAR(30),
+    pickup_location VARCHAR(100),
+    drop_location VARCHAR(100),
+    avg_vtat DECIMAL(5,2),
+    avg_ctat DECIMAL(5,2),
+    cancelled_by_customer BOOLEAN,
+    customer_cancel_reason VARCHAR(100),
+    cancelled_by_driver BOOLEAN,
+    driver_cancel_reason VARCHAR(100),
+    incomplete_ride BOOLEAN,
+    incomplete_reason VARCHAR(100),
+    booking_value DECIMAL(10,2),
+    ride_distance DECIMAL(6,2),
+    driver_rating DECIMAL(2,1),
+    customer_rating DECIMAL(2,1),
+    payment_method VARCHAR(20)
+);

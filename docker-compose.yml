@@ -1,0 +1,17 @@
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: uberdb
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./datasets:/datasets
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
